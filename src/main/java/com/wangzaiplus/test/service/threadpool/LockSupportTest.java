@@ -123,6 +123,9 @@ public class LockSupportTest {
         AThread.start();
     }
 
+    /**
+     * 通过CAS 自旋的方式对两个线程通信
+     */
     public void method4(){
         aThread = new Thread(()-> {
             for (char c : a) {
